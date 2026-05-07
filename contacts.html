@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Дрягин Матвей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">М<span>атвей</span></a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="about.html" class="nav__link">Обо мне</a>
+                <a href="projects.html" class="nav__link">Проекты</a>
+                <a href="contacts.html" class="nav__link nav__link--active">Контакты</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Сменить тему">
+                <span class="theme-toggle__thumb"></span>
+            </button>
+            <button class="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Связаться со мной</h1>
+            <p>Открыт к обучению, проектам и интересным задачам</p>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container contacts__grid">
+            <div class="contacts__info">
+                <h2>Контакты</h2>
+                <ul class="contacts__list">
+                    <li>
+                        <span class="contacts__icon">@</span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:mathewdriagin@gmail.com">mathewdriagin@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contacts__icon">TG</span>
+                        <div>
+                            <strong>Telegram</strong>
+                            <a href="https://t.me/matyanis" target="_blank">@matyanis</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contacts__icon">GH</span>
+                        <div>
+                            <strong>GitHub</strong>
+                            <a href="https://github.com/mik80-playa" target="_blank">mik80-playa</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contacts__icon">📍</span>
+                        <div>
+                            <strong>Город</strong>
+                            <span>Санкт-Петербург</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="contact-form" onsubmit="return handleForm(event)">
+                <h2>Написать сообщение</h2>
+                <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required placeholder="Как к вам обращаться?">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" required placeholder="your@email.com">
+                </label>
+                <label>
+                    <span>Тема</span>
+                    <input type="text" name="subject" placeholder="О чём пишете?">
+                </label>
+                <label>
+                    <span>Сообщение</span>
+                    <textarea name="message" rows="5" required placeholder="Текст сообщения..."></textarea>
+                </label>
+                <button type="submit" class="btn btn--primary">Отправить</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

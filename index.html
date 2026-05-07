@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дрягин Матвей — Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">М<span>атвей</span></a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link nav__link--active">Главная</a>
+                <a href="about.html" class="nav__link">Обо мне</a>
+                <a href="projects.html" class="nav__link">Проекты</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Сменить тему">
+                <span class="theme-toggle__thumb"></span>
+            </button>
+            <button class="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <p class="hero__subtitle">Привет, меня зовут</p>
+                <h1 class="hero__title">Матвей Дрягин</h1>
+                <p class="hero__role">1 курс, Хекслет Колледж</p>
+                <p class="hero__desc">Учусь на айтишника, в свободное время верстаю сайты и копаюсь в базах. Здесь — мои учебные работы и то, что делал для себя.</p>
+                <div class="hero__buttons">
+                    <a href="projects.html" class="btn btn--primary">Мои проекты</a>
+                    <a href="contacts.html" class="btn btn--ghost">Связаться</a>
+                </div>
+            </div>
+            <div class="hero__avatar">
+                <div class="avatar-circle"><img src="avatar.jpg" alt="Дрягин Матвей"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Что я умею</h2>
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">&lt;/&gt;</div>
+                    <h3>Вёрстка</h3>
+                    <p>HTML и CSS, чтобы сайт нормально смотрелся и на телефоне.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">DB</div>
+                    <h3>Базы данных</h3>
+                    <p>PostgreSQL, пишу SQL-запросы, рисую таблицы и связи.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">WP</div>
+                    <h3>WordPress</h3>
+                    <p>Поднимал сайты на готовых темах, ковырялся в плагинах.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">M</div>
+                    <h3>Moodle</h3>
+                    <p>Делал учебный курс с тестами в рамках практики.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

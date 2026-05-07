@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты — Дрягин Матвей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">М<span>атвей</span></a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="about.html" class="nav__link">Обо мне</a>
+                <a href="projects.html" class="nav__link nav__link--active">Проекты</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Сменить тему">
+                <span class="theme-toggle__thumb"></span>
+            </button>
+            <button class="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Мои проекты</h1>
+            <p>Учебные и личные работы, которыми я горжусь</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="projects__filters">
+                <button class="filter-btn filter-btn--active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="web">Веб</button>
+                <button class="filter-btn" data-filter="db">БД</button>
+                <button class="filter-btn" data-filter="cms">CMS</button>
+            </div>
+
+            <div class="projects__grid">
+                <article class="project-card" data-cat="web">
+                    <div class="project-card__thumb project-card__thumb--1">HTML / CSS</div>
+                    <div class="project-card__body">
+                        <h3>Личное портфолио</h3>
+                        <p>Этот сайт. Свёрстан вручную, адаптивный, без фреймворков.</p>
+                        <div class="project-card__tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-cat="db">
+                    <div class="project-card__thumb project-card__thumb--2">PostgreSQL</div>
+                    <div class="project-card__body">
+                        <h3>База данных «Личная библиотека»</h3>
+                        <p>Учёт книг, авторов, жанров. Нормализация, ER-диаграмма, SQL-запросы.</p>
+                        <div class="project-card__tags">
+                            <span>PostgreSQL</span><span>SQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-cat="cms">
+                    <div class="project-card__thumb project-card__thumb--3">WordPress</div>
+                    <div class="project-card__body">
+                        <h3>Многостраничный сайт</h3>
+                        <p>Сайт на WordPress с кастомизированной темой и плагинами.</p>
+                        <div class="project-card__tags">
+                            <span>WordPress</span><span>PHP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-cat="cms">
+                    <div class="project-card__thumb project-card__thumb--4">Moodle</div>
+                    <div class="project-card__body">
+                        <h3>Курс «Цифровая грамотность»</h3>
+                        <p>Учебный курс с тестами, заданиями и материалами.</p>
+                        <div class="project-card__tags">
+                            <span>Moodle</span><span>LMS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-cat="db">
+                    <div class="project-card__thumb project-card__thumb--5">SQL</div>
+                    <div class="project-card__body">
+                        <h3>Учёт расходов</h3>
+                        <p>База данных для учёта личных расходов, отчёты по категориям.</p>
+                        <div class="project-card__tags">
+                            <span>PostgreSQL</span><span>SQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-cat="web">
+                    <div class="project-card__thumb project-card__thumb--6">Landing</div>
+                    <div class="project-card__body">
+                        <h3>Лендинг мероприятия</h3>
+                        <p>Одностраничный сайт-приглашение с формой обратной связи.</p>
+                        <div class="project-card__tags">
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
