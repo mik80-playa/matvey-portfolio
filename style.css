@@ -1,4 +1,4 @@
-/* === Theme variables === */
+/* цвета и тени вынес в переменные — так удобнее переключать тему */
 :root {
     --bg: #f9fafb;
     --bg-elevated: #ffffff;
@@ -37,7 +37,7 @@ body.dark {
     --tag-text: #67e8f9;
 }
 
-/* === Reset & base === */
+/* базовый ресет — обнуляем отступы и ставим border-box всем элементам */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -57,7 +57,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding: 0 24px;
 }
 
-/* === Header === */
+/* шапка — sticky, чтобы при скролле не убегала вверх */
 .header {
     background: var(--bg-elevated);
     border-bottom: 1px solid var(--border);
@@ -107,7 +107,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     border-radius: 2px;
 }
 
-/* === Theme toggle === */
+/* тумблер темы. JS навешивает класс .dark на body, а тут оформление */
 .theme-toggle {
     width: 56px;
     height: 30px;
@@ -162,7 +162,6 @@ body.dark .theme-toggle__thumb::before {
     transition: 0.3s;
 }
 
-/* === Hero === */
 .hero {
     background: var(--bg-soft);
     padding: 80px 0;
@@ -228,7 +227,7 @@ body.dark .theme-toggle__thumb::before {
 }
 .avatar-circle--big { width: 260px; height: 260px; font-size: 120px; }
 
-/* === Buttons === */
+/* кнопки */
 .btn {
     display: inline-block;
     padding: 14px 28px;
@@ -256,7 +255,6 @@ body.dark .theme-toggle__thumb::before {
 }
 .btn--ghost:hover { background: var(--accent); color: #fff; }
 
-/* === Sections === */
 .section-title {
     font-size: 36px;
     font-weight: 800;
@@ -300,7 +298,7 @@ body.dark .theme-toggle__thumb::before {
 .feature-card h3 { margin-bottom: 8px; font-size: 18px; }
 .feature-card p { color: var(--text-muted); font-size: 15px; }
 
-/* === Page header === */
+/* мини-шапка наверху страниц «Обо мне», «Проекты», «Контакты» */
 .page-header {
     background: var(--bg-soft);
     padding: 60px 0;
@@ -318,7 +316,7 @@ body.dark .theme-toggle__thumb::before {
 }
 .page-header p { color: var(--text-muted); font-size: 18px; }
 
-/* === About === */
+/* страница «Обо мне». на мобильном фото и текст становятся в столбик и центрируются */
 .about { padding: 80px 0; background: var(--bg-elevated); transition: background-color 0.3s ease; }
 .about__grid {
     display: grid;
@@ -329,7 +327,7 @@ body.dark .theme-toggle__thumb::before {
 .about__text h2 { font-size: 32px; margin-bottom: 16px; }
 .about__text p { color: var(--text-muted); font-size: 17px; margin-bottom: 16px; }
 
-/* === Skills === */
+/* блок навыков. теги — это «таблетки», при наведении заливаются градиентом */
 .skills { padding: 80px 0; background: var(--bg-secondary); transition: background-color 0.3s ease; }
 .skills__grid {
     display: grid;
@@ -393,7 +391,7 @@ body.dark .theme-toggle__thumb::before {
     transform: translateY(-2px);
 }
 
-/* === Projects === */
+/* проекты + кнопки-фильтры. фильтр по data-cat (web / db / cms) — обработчик в JS */
 .projects { padding: 80px 0; background: var(--bg); transition: background-color 0.3s ease; }
 .projects__filters {
     display: flex;
@@ -464,7 +462,8 @@ body.dark .theme-toggle__thumb::before {
     font-weight: 600;
 }
 
-/* === Contacts === */
+/* контакты — список слева, форма справа. на мобиле в столбик */
+/* TODO: подключить Formspree чтобы форма реально отправляла письма */
 .contacts { padding: 80px 0; background: var(--bg); transition: background-color 0.3s ease; }
 .contacts__grid {
     display: grid;
@@ -534,7 +533,7 @@ body.dark .theme-toggle__thumb::before {
     text-align: center;
 }
 
-/* === Footer === */
+/* подвал — фон тёмный всегда, не зависит от темы (мне так нравится больше) */
 .footer {
     background: #0b1220;
     color: #8a96a4;
@@ -549,7 +548,7 @@ body.dark .footer { background: #050a13; }
     gap: 12px;
 }
 
-/* === Responsive === */
+/* адаптив: 768 — планшет, 480 — телефон */
 @media (max-width: 768px) {
     .nav {
         position: absolute;
